@@ -1,0 +1,11 @@
+[Unit]
+Description=Copy host_file created by dnsapi.service to remote DNS hosts file
+Wants=dnsmonitor.service
+
+[Path]
+PathModified=/var/www/cgi-bin/dnsapi/hosts.db
+
+[Install]
+WantedBy=multi-user.target
+
+
