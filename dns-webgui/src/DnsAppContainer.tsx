@@ -53,10 +53,10 @@ function DnsAppContainer() {
             <AppBar position="static" className={classes.appbar} >
                 <Toolbar>
                     <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-                        <img className={classes.logo} alt="IRCCS" src={process.env.PUBLIC_URL + '/logo.png'}/>
+                        <img className={classes.logo} alt="LOGO" src={process.env.PUBLIC_URL + '/logo.png'}/>
                     </IconButton>
                     <Typography variant="h6" className={classes.title}  color="textSecondary">
-                        Irccs Centro Neurolesi Bonino Puleio
+                        NAME
                     </Typography>
                     <Button>Login</Button>
                 </Toolbar>
