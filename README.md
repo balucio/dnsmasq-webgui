@@ -5,7 +5,7 @@ This is a very simple project written in *Python* and *React* in order to manage
 There are two folders:
 
 - `dns-backend`: contains the API written in python using Flask framework, and some others tools to sync the DNS hosts file.
-- `dns-webgui` folder contains the web gui itself. The Webgui is written in typescrip using React Hooks.
+- `dns-webgui` folder contains the web gui itself. The Webgui is written in typescript using React Hooks.
 
 ### Web-Gui
 
