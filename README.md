@@ -26,3 +26,31 @@ Inside `dns-backend` folder, there are some others scripts and **systemd** descr
 - `dnsmonitor.path`: it is a **systemd** descriptor *path* used to keep monitored the `/var/www/cgi-bin/dnsapi/hosts.db` for modifications.
 
 - `dnsmonitor.service`: it is the **systemd** descriptor *service* triggered by `dnsmonitor.path` when a change to `hosts.db` occurs. This service will run the `dnsapplyconfig.sh` script in order to update the dns configuration.
+
+
+### Compilation
+
+Here a very short guide on how to compile the _front-end_
+
+```bash
+git clone https://github.com/balucio/dnsmasq-webgui.git
+cd dnsmasq-webgui/dns-webgui
+# this will install the dependency
+yarn install
+# this will build the compiled web application, take a break because it requires time
+yarn build
+```
+
+For latest `yarn` version you should add :
+
+```
+export NODE_OPTIONS=--openssl-legacy-provider
+npx update-browserslist-db@latest
+```
+see [Stackoverflow](https://stackoverflow.com/questions/69394632/webpack-build-failing-with-err-ossl-evp-unsupported)
+
+At end you should find the compiled application in build directory, you can test it using
+
+```
+DANGEROUSLY_DISABLE_HOST_CHECK=true yarn start
+```
